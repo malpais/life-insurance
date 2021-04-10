@@ -1,0 +1,64 @@
+.frm-step {
+    margin-top: .5rem;
+}
+.steo-frm .light-shadow {
+    margin-top: 4%;
+    width: 100%;
+    background-color: #1E90FF;
+    color: white;
+    border: none;
+    outline: none;
+}
+
+.ste-frm .light-shadow {
+    width: 60%;
+    border-radius: 20px;
+    background-color: lightgray;
+    color: black;
+    border: blue;
+}
+.so-frm .light-shadow {
+    width: 70%;
+    border-radius: 20px;
+    background-color: #1E90FF;
+    margin-top: 4%;
+    color: white;
+    border: none;
+    outline: none;
+}
+
+.main-container{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.form-container{
+    padding : 1rem;
+    background: #fff;
+    width: 80%;
+    border-radius: 10px;
+    box-shadow: 0 0 5px #ccc;
+}
+
+.fullWidth{
+    width:100%
+}
+
+.form-container button{
+    margin-bottom: 0;
+}
+.form-container label{
+    font-size: 14px;
+    margin:0;
+    transform: translate(14px, 14px) scale(1);
+}
+
+.form-container input{
+    padding: 12px 14px;
+}
+
+@media (max-width: 786px){
+    
+}
