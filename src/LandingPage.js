@@ -8,6 +8,7 @@ import stateAuto from './assets/img/state-auto.png';
 import heroImg from './assets/img/newHero.jpg';
 import connectImg from './assets/img/connection.png';
 import healthLogo from './assets/img/healthLogo.png';
+import Logo from './assets/img/logoQh.png';
 import whatImg from './assets/img/car.jpeg';
 import quote from './assets/img/quote.png';
 import canvas from './assets/img/canvas.png';
@@ -36,7 +37,7 @@ function LandingPage() {
 					<Row>
 						<Col xs={{ span: 24 }} lg={{ span: 12 }}>
 							<a href='#'>
-								<img src={healthLogo} width='181' alt='logo' />
+								<img src={Logo} width='181' alt='logo' />
 							</a>
 						</Col>
 						<Col xs={{ span: 24 }} lg={{ span: 12 }} className='text-right'>
@@ -52,10 +53,10 @@ function LandingPage() {
 									<div className='block-left-hero'>
 										<Row>
 											<Col xs={{ span: 24 }} lg={{ span: 12 }}>
-												<h1 className='hero_heading'>Health Insurance: Simplified..</h1>
-												<p className='text-white para-white'>We have Health Insurance plans for seniors, students, and everyone in between. Get the right plan at the right price. </p>
+												<h1 className='hero_heading'>Life Insurance: Simplified..</h1>
+												<p className='text-white para-white'>We have Life Insurance plans for seniors, students, and everyone in between. Get the right plan at the right price. </p>
 												<Button onClick={handleRoute} type='block ' size='large' className='btn-large text-blue'>
-													Free Health Quote <ArrowRightOutlined />
+													Free Life Quote <ArrowRightOutlined />
 												</Button>
 											</Col>
 											<Col xs={{ span: 24 }} lg={{ span: 11, offset: 1 }}>

@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { Nav, Navbar, Container, Row, Col, Button } from 'react-bootstrap';
-import healthLogo from '../assets/img/healthLogo.png';
+import Logo from '../assets/img/logo.png'
 import { Link } from 'react-router-dom';
 
 import { TextField, Grid } from '@material-ui/core';
@@ -15,7 +15,7 @@ function MainNavbar() {
 		<div className='white-bfr container'>
 			<Navbar expand='lg' bg='' variant=''>
 				<Navbar.Brand href='/'>
-					<img src={healthLogo} width='181' alt='logo' />
+					<img src={Logo} width='181' alt='logo' />
 				</Navbar.Brand>
 			</Navbar>
 		</div>
@@ -41,7 +41,7 @@ function Footer() {
 			</Row>
 			<Row className='fooot-r'>
 				<Col xd={2} md={{ offset: 5 }}>
-					© CopyrightUSA Health Quotes Quote 2021
+					© Copyright Quotehound 2021
 				</Col>
 			</Row>
 		</Container>

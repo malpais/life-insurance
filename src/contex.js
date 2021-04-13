@@ -15,21 +15,23 @@ class ContextApiProvider extends Component {
 		state: '',
 		dob: new Date(),
 		pre_exisiting_conditions: true,
-		landing_page: 'usahealthquotes.com',
+		landing_page: 'life.quotehound.com',
+		lp_s1: '',
+		lp_s2: '13',
+		useragent: navigator.userAgent,
+
 	};
 
 	submit = async (value) => {
 		let formData = new FormData();
-		formData.append('lp_campaign_id', '601a0da83281b');
-		formData.append('lp_campaign_key', 'DvKL4cVyGh697dwNbJCY');
-		formData.append('lp_s1', '12');
+		formData.append('lp_campaign_id', '601a0de952304');
+		formData.append('lp_campaign_key', 'GBmvtHrcfW9C8bQ2DyFq');
 		formData.append('dob', this.state.dob);
 		formData.append('zip_code', this.state.zip);
 		formData.append('first_name', this.state.first_name);
 		formData.append('last_name', this.state.last_name);
 		formData.append('email_address', this.state.email_address);
 		formData.append('phone_cell', this.state.phone_cell);
-		formData.append('pre_exisiting_conditions', this.state.pre_exisiting_conditions);
 		try {
 			let insurance = await axios.post('https://quotehound.leadspediatrack.com/post.do', formData);
 			console.log(insurance);
@@ -58,6 +60,57 @@ class ContextApiProvider extends Component {
 			}
 		}
 	};
+
+	componentDidMount() {
+	
+		const queryString = window.location.search;
+		const urlParams = new URLSearchParams(queryString);
+
+		const utmCampaign = urlParams.get('utm_campaign');
+		this.setState({
+			postData: {
+				...this.state.postData,
+				campaign: utmCampaign
+			}
+			
+		})
+
+		const utmMed = urlParams.get('utm_medium');
+
+		if (utmMed == 'adwords'){
+			this.setState({
+				postData: {
+					...this.state.postData,
+					lp_s1: '101'
+				},
+			});
+		}
+		if (utmMed == 'facebook'){
+			this.setState({
+				postData: {
+					...this.state.postData,
+					lp_s1: '103'
+				},
+			});
+		}
+		if (utmMed == 'bing'){
+			this.setState({
+				postData: {
+					...this.state.postData,
+					lp_s1: '108'
+				},
+			});
+		}
+		else{
+			this.setState({
+				postData: {
+					...this.state.postData,
+					lp_s1: '12'
+				},
+			});
+		}
+
+	}
 
 	handleChange = (e) => {
 		const { name, value } = e.target;
