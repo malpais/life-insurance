@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { Nav, Navbar, Container, Row, Col, Button } from 'react-bootstrap';
-import Logo from '../assets/img/logo.png'
+import Logo from '../assets/img/logoQh.png'
 import { Link } from 'react-router-dom';
 
 import { TextField, Grid } from '@material-ui/core';

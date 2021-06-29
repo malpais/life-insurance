@@ -396,7 +396,7 @@ function LandingPage() {
 				<Footer className='footer'>
 					<div className='footer-container'>
 						<div className='footer-top-wrap-2'>
-							<h1 className='heading-16'> USA Health</h1>
+							<h1 className='heading-16'>Quotehound</h1>
 						</div>
 						<div className='div-block-58'></div>
 					</div>
